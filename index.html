@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>티나한복</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>티나한복 애기 한복 대여 갤러리</header>
+
+<div class="container">
+
+<!-- ✅ 목록 -->
+<div id="listPage">
+    <div class="gallery" id="gallery"></div>
+
+    <button class="contact-btn" onclick="goForm()">📩 문의하기</button>
+</div>
+
+<!-- ✅ 상세 -->
+<div id="detailPage" class="detail">
+    <div class="back-btn" onclick="goBack()">← 목록으로</div>
+
+    <img id="detailImage">
+    <h2 id="detailTitle"></h2>
+    <p id="detailDesc"></p>
+</div>
+
+<!-- ✅ 문의 페이지 -->
+<div id="formPage" class="detail">
+    <div class="back-btn" onclick="goBack()">← 목록으로</div>
+
+    <div class="form-box">
+        <h3>📩 문의하기</h3>
+
+        <input type="text" id="name" placeholder="이름 입력">
+        <input type="tel" id="phone" placeholder="01012345678">
+
+        <div class="agree">
+            <input type="checkbox" id="agree">
+            <label for="agree">개인정보 수집 및 이용에 동의합니다</label>
+        </div>
+
+        <button onclick="submitForm()">제출하기</button>
+        <p id="formMsg"></p>
+    </div>
+</div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
